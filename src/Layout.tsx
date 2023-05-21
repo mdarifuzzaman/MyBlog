@@ -36,20 +36,69 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto:400,300,700' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" href="css/animate.css" />
+        <link rel="stylesheet" href="css/icomoon.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/main.js"></script>
+
       </Head>
+      <div id="fh5co-offcanvas">
+        <a href="#" className="fh5co-close-offcanvas js-fh5co-close-offcanvas"><span><i className="icon-cross3"></i> <span>Close</span></span></a>
+        <div className="fh5co-bio">
+          <figure>
+            <img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template" className="img-responsive" />
+          </figure>
+          <h3 className="heading">About Me</h3>
+          <h2>Emily Tran Le</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+          <ul className="fh5co-social">
+            <li><a href="#"><i className="icon-twitter"></i></a></li>
+            <li><a href="#"><i className="icon-facebook"></i></a></li>
+            <li><a href="#"><i className="icon-instagram"></i></a></li>
+          </ul>
+        </div>
+
+        <div className="fh5co-menu">
+          <div className="fh5co-box">
+            <h3 className="heading">Categories</h3>
+            <ul>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Style</a></li>
+              <li><a href="#">Photography</a></li>
+              <li><a href="#">Food &amp; Drinks</a></li>
+              <li><a href="#">Culture</a></li>
+            </ul>
+          </div>
+          <div className="fh5co-box">
+            <h3 className="heading">Search</h3>
+            <form action="#">
+              <div className="form-group">
+                <input type="text" className="form-control" placeholder="Type a keyword" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className={mainClassPageEditing}>
+      <>
         <header>
           <div id="header">{route && <Placeholder name="headless-header" rendering={route} />}</div>
         </header>
         <main>
           <div id="content">{route && <Placeholder name="headless-main" rendering={route} />}</div>
         </main>
-        <footer>
-          <div id="footer">{route && <Placeholder name="headless-footer" rendering={route} />}</div>
+        <footer id="fh5co-footer">
+          <>{route && <Placeholder name="headless-footer" rendering={route} />}</>
         </footer>
-      </div>
+      </>
     </>
   );
 };

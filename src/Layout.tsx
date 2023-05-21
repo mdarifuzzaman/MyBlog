@@ -1,6 +1,4 @@
-/**
- * This Layout is needed for Starter Kit.
- */
+/* eslint-disable */
 import React from 'react';
 import Head from 'next/head';
 import {

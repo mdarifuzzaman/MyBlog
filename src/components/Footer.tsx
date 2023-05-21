@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 
 // type FooterProps = ComponentProps & {
